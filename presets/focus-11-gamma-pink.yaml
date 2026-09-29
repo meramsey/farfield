@@ -1,0 +1,66 @@
+name: focus-11-gamma-pink
+title: Focus 11 + Gamma + Pink Bed — measured sustained state
+fidelity: measured-tape
+notes: 'Derived from the user-confirmed Focus 11-specific interval 16:00-27:00
+
+  of the supplied stereo recording.
+
+
+  The defining gamma structure is represented as Farfield SAM: opposite-per-ear
+
+  carrier phase modulation at 40 Hz. This is intentionally NOT represented as
+
+  a 40-Hz binaural beat.
+
+
+  The broadband bed has been restored as pink noise. Its exact mastering level
+
+  cannot be isolated perfectly from the source because narration occupies the
+
+  same broadband spectrum, so the pink-bed level is an audition-calibrated
+
+  approximation rather than a claim of sample-perfect recovery.
+
+
+  The 256.869-Hz SAM family remains somewhat lower-confidence in exact level
+
+  than the 323.625-Hz and 384.875-Hz families because the original coarse
+
+  tracking pass did not directly track its center bin.
+
+  '
+sample_rate: 48000
+output:
+  peak_dbfs: -3.0
+defaults:
+  harmonics:
+  - 1.0
+segments:
+- duration: '30:00'
+  groups:
+  - name: pink_bed
+    level_db: -7.4
+    noise:
+      type: pink
+  - name: gamma257
+    level_db: -4.0
+    sam:
+      carrier_hz: 256.869
+      rate_hz: 40.0
+      depth_rad: 0.442
+      path: closed
+  - name: gamma324
+    level_db: 0.0
+    sam:
+      carrier_hz: 323.625
+      rate_hz: 40.0
+      depth_rad: 0.568
+      path: closed
+  - name: gamma385
+    level_db: -1.4
+    sam:
+      carrier_hz: 384.875
+      rate_hz: 40.0
+      depth_rad: 0.716
+      path: closed
+emerge: false
