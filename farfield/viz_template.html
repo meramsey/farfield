@@ -92,6 +92,7 @@
   .tier[data-tier="measured-tape"] { color: #3987e5; }
   .tier[data-tier="measured-mss"] { color: #9085e9; }
   .tier[data-tier="patent"] { color: #199e70; }
+  .tier[data-tier="best-effort"] { color: #d0603a; }
   .tier[data-tier="original"] { color: #c98500; }
   .spacer { flex: 1; }
   .chip {
@@ -291,6 +292,7 @@ const PAYLOAD = __PAYLOAD__;
     "measured-tape": "measured from the original tapes",
     "measured-mss": "measured from the MSS remasters",
     "patent": "from the patents",
+    "best-effort": "best-effort reconstruction (unverified)",
     "original": "original design",
   };
   const tierEl = document.getElementById("tier");

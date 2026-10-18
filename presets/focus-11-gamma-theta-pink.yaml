@@ -1,0 +1,54 @@
+name: focus-11-gamma-theta-pink
+title: "Focus 11 — SAM triad plus 4 Hz theta (unverified arrangement)"
+fidelity: best-effort
+notes: |
+  BEST-EFFORT, UNVERIFIED, AND PARTLY AN ARRANGEMENT. Identical to
+  focus-11-gamma-pink (read its notes: same contributed, unverified 40 Hz
+  SAM triad and ear-set pink bed) plus a conventional L 175 / R 179 Hz
+  binaural pair, a 4 Hz beat with the right ear high.
+
+  The contributor reports that pair as INTERMITTENT in the source, not
+  continuously present. This preset plays it for the whole 30:00, so its
+  persistence is a design choice, not a measurement. Its -7 dB level was
+  likewise chosen, not measured. Prefer focus-11-gamma-pink as the
+  closer sketch of the source; this one is an audition variant.
+sample_rate: 48000
+output:
+  peak_dbfs: -3.0
+defaults:
+  harmonics:
+  - 1.0
+segments:
+- duration: '30:00'
+  groups:
+  - name: theta4
+    level_db: -7.0
+    pairs:
+    - left: 175.0
+      right: 179.0
+  - name: gamma257
+    level_db: -4.0
+    sam:
+      carrier_hz: 256.869
+      rate_hz: 40.0
+      depth_rad: 0.442
+      path: closed
+  - name: gamma324
+    level_db: 0.0
+    sam:
+      carrier_hz: 323.625
+      rate_hz: 40.0
+      depth_rad: 0.568
+      path: closed
+  - name: gamma385
+    level_db: -1.4
+    sam:
+      carrier_hz: 384.875
+      rate_hz: 40.0
+      depth_rad: 0.716
+      path: closed
+  bed:
+    level_db: -7.4
+    color: pink
+    slope_db_per_decade: -10.0
+emerge: false

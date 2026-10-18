@@ -211,9 +211,9 @@ def test_fidelity_must_be_a_known_tier():
         load_session_dict(data)
 
 
-def test_fidelity_tiers_are_the_documented_four():
+def test_fidelity_tiers_are_the_documented_five():
     assert FIDELITY_TIERS == frozenset(
-        {"measured-tape", "measured-mss", "patent", "original"})
+        {"measured-tape", "measured-mss", "patent", "best-effort", "original"})
 
 
 def test_a_session_needs_at_least_one_segment():

@@ -30,13 +30,18 @@ TIER_HEADINGS = {
     "measured-tape": "measured from the original tapes",
     "measured-mss": "measured from the MSS remasters",
     "patent": "from the patents",
+    "best-effort": "best-effort reconstructions (unverified)",
     "original": "original designs",
 }
 """Plain-English group headings for the machine-readable fidelity tiers.
 The machine values stay in the YAML and the sidecar; these are what a
 person sees in `list`."""
 
-TIER_LABELS = {**TIER_HEADINGS, "original": "original design"}
+TIER_LABELS = {
+    **TIER_HEADINGS,
+    "best-effort": "best-effort reconstruction (unverified)",
+    "original": "original design",
+}
 """Singular variant for a single session's `describe` line."""
 
 
@@ -49,7 +54,10 @@ def format_duration(seconds: float) -> str:
     return f"{minutes}:{secs:02d}"
 
 
-_TIER_ORDER = {"measured-tape": 0, "measured-mss": 1, "patent": 2, "original": 3}
+_TIER_ORDER = {
+    "measured-tape": 0, "measured-mss": 1, "patent": 2, "best-effort": 3,
+    "original": 4,
+}
 
 
 def list_lines(directory: Path) -> list[str]:

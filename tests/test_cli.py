@@ -26,6 +26,7 @@ def test_list_lines_group_by_fidelity_tier():
     assert "measured from the original tapes:" in text
     assert "measured from the MSS remasters:" in text
     assert "from the patents:" in text
+    assert "best-effort reconstructions (unverified):" in text
     assert "original designs:" in text
     assert "sleep-90" in text
     assert "focus-10" in text
