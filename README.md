@@ -32,12 +32,15 @@ own custom meditation sessions and have fun with it.
   modulation depths and layer timelines from any stereo recording — it's
   how the measured presets were made, and how the test suite verifies
   every render against its numbers.
-- **16 bundled presets** (in [`presets/`](presets/)) in four provenance
+- **19 bundled presets** (in [`presets/`](presets/)) in five provenance
   groups, strongest first:
   measured from the original tapes, measured from the MSS remasters, from
-  the patents, and original designs. The measurement data behind the
-  first two groups is published in
-  [`docs/tape-analysis/`](docs/tape-analysis/).
+  the patents, best-effort reconstructions, and original designs. The
+  measurement data behind the first two groups is published in
+  [`docs/tape-analysis/`](docs/tape-analysis/). Best-effort presets are
+  community-contributed guesses at a recording that farfield has not
+  verified with its own pipeline; their notes say what is claimed and
+  what was chosen by ear.
 
 The measured presets were reverse engineered by spectral analysis of
 personal copies of the classic gateway-era recordings and their modern

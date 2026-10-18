@@ -11,11 +11,16 @@ MEASURED_TAPE = ["focus-10", "focus-12", "focus-15", "focus-21"]
 # (tests/test_presets_mss.py holds their own shape assertions).
 MEASURED_MSS = ["focus-10-mss", "focus-12-mss", "focus-15-mss", "focus-21-mss"]
 PATENT = ["sleep-90", "wake", "sam-gamma"]
+# Community-contributed reconstructions that farfield has not re-measured
+# (tests/test_presets_best_effort.py holds their disclosure assertions).
+BEST_EFFORT = [
+    "focus-11-gamma-pink", "focus-11-gamma-theta-pink", "focus-11-older-flac",
+]
 
 
 def test_all_expected_presets_exist():
     assert set(
-        ORIGINAL + MEASURED_TAPE + MEASURED_MSS + PATENT
+        ORIGINAL + MEASURED_TAPE + MEASURED_MSS + PATENT + BEST_EFFORT
     ) == set(preset_names())
 
 
@@ -71,5 +76,6 @@ def test_list_is_grouped_measured_first():
         text.index("measured from the original tapes:")
         < text.index("measured from the MSS remasters:")
         < text.index("from the patents:")
+        < text.index("best-effort reconstructions (unverified):")
         < text.index("original designs:")
     )

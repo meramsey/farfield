@@ -28,7 +28,10 @@ def preset_names() -> list[str]:
     return sorted(p.stem for p in PRESET_DIR.glob("*.yaml"))
 
 
-_TIER_ORDER = {"measured-tape": 0, "measured-mss": 1, "patent": 2, "original": 3}
+_TIER_ORDER = {
+    "measured-tape": 0, "measured-mss": 1, "patent": 2, "best-effort": 3,
+    "original": 4,
+}
 
 
 def preset_metadata() -> list[dict]:

@@ -30,7 +30,8 @@ def test_measured_totals_match_the_tape_timeline(name, total_s):
 def test_measured_sorts_first_in_the_library():
     tiers = [e["fidelity"] for e in preset_metadata()]
     assert tiers[0] == "measured-tape"
-    order = {"measured-tape": 0, "measured-mss": 1, "patent": 2, "original": 3}
+    order = {"measured-tape": 0, "measured-mss": 1, "patent": 2,
+             "best-effort": 3, "original": 4}
     assert tiers == sorted(tiers, key=lambda t: order[t])
 
 

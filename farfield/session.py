@@ -16,9 +16,12 @@ import yaml
 
 from farfield.waveshape import DEFAULT_HARMONICS
 
-FIDELITY_TIERS = frozenset({"measured-tape", "measured-mss", "patent", "original"})
+FIDELITY_TIERS = frozenset(
+    {"measured-tape", "measured-mss", "patent", "best-effort", "original"})
 """Provenance tiers, strongest first: measured from the original tapes,
-measured from the MSS remasters, from the patents, original designs."""
+measured from the MSS remasters, from the patents, best-effort
+reconstructions (claims about a recording that farfield has not verified
+with its own pipeline), original designs."""
 
 DEFAULT_SAMPLE_RATE = 48000
 DEFAULT_PEAK_DBFS = -3.0

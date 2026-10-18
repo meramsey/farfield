@@ -83,9 +83,9 @@ def test_measured_tape_is_a_valid_tier():
     assert _bed_session(fidelity="measured-tape").fidelity == "measured-tape"
 
 
-def test_tier_set_is_exactly_the_four():
+def test_tier_set_is_exactly_the_five():
     assert FIDELITY_TIERS == frozenset(
-        {"measured-tape", "measured-mss", "patent", "original"})
+        {"measured-tape", "measured-mss", "patent", "best-effort", "original"})
 
 
 def test_crossfade_stereo_parses():
